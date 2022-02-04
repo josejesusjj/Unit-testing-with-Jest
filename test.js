@@ -28,11 +28,11 @@ test("1.2 dollar should be 127.9 yen", function(){
     const { fromDollarToYen } = require('./app.js')
 
     // use the function like its suppoed to be used
-    const yen = fromDollarToYen(1)
+    const yen = fromDollarToYen(1.2)
 
-    // if 1 dollars are 106.58 yen, then 3.5 dollars should be (106.58*3.5)
-    const expected = 106.58 * 3.5; 
+    // if 1 dollars are 106.58 yen, then 1.2 dollars should be (106.58*1.2)
+    const expected = 106.58 * 1.2; 
     
     // this is the comparison for the unit test
-     expect(fromDollarToYen(3.5)).toBe(373.042); //1 euro are 1.2 dolares, then 3.5 euros should be = (3.5 * 1.2)
+     expect(fromDollarToYen(1.2)).toBe(127.90); //hacer comentario aqui sobre lo esperado en base a los valores introducidos
 })
