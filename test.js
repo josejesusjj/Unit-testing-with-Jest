@@ -36,3 +36,16 @@ test("1.2 dollar should be 127.9 yen", function(){
     // this is the comparison for the unit test
      expect(fromDollarToYen(1.2)).toBe(127.90); //hacer comentario aqui sobre lo esperado en base a los valores introducidos
 })
+test("383.7 yen should be 2.4 pounds", function(){
+    //import the function from app.js
+    const { fromYenToPound } = require('./app.js')
+
+    // use the function like its suppoed to be used
+    const pounds = fromYenToPound(383.7)
+
+    // if 127,9 yen are 0.8 pounds, then 383.7 yen should be (383.7/127.9*0.8)
+    const expected = 383.7/(127.9*0.8); 
+    
+    // this is the comparison for the unit test
+     expect(fromYenToPound(383.7)).toBe(2.4); //hacer comentario aqui sobre lo esperado en base a los valores introducidos
+})
